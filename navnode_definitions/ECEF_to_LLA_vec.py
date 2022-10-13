@@ -8,7 +8,6 @@ import navnode_definitions
 
 
 class ECEF2LLANode(ArmLogicTreeNode):
-    """Returns the LLA (Latitude [dd], Longitude [dd], Altitude [m above MSL]) of the given world point."""
     bl_idname = 'LNECEF2LLANode'
     bl_label  = 'ECEF to LLA'
 

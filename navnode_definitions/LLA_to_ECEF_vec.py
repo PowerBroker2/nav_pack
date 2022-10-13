@@ -8,7 +8,6 @@ import navnode_definitions
 
 
 class LLA2ECEFNode(ArmLogicTreeNode):
-    """Returns the ECEF coordinate (x [m], y [m], z[m]) of the given LLA coordinate."""
     bl_idname = 'LNLLA2ECEFNode'
     bl_label  = 'LLA to ECEF'
 

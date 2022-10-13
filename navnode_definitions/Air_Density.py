@@ -8,7 +8,6 @@ import navnode_definitions
 
 
 class AirDensityNode(ArmLogicTreeNode):
-    """Returns the air density (kg/m^3) at the given altitude above MSL (m)."""
     bl_idname = 'LNAirDensityNode'
     bl_label  = 'Air Density'
 
