@@ -16,7 +16,7 @@ class NED2ECEFRotNode(ArmLogicTreeNode):
     arm_version  = 1
 
     def arm_init(self, context):
-        self.add_input('ArmVectorSocket', 'NED Origin LLA')
+        self.add_input('ArmVectorSocket', 'NED Origin LLA [dd, dd, m]')
 
         self.add_output('ArmRotationSocket', 'Rotation', is_var=True)
         

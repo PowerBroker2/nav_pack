@@ -16,7 +16,7 @@ class ECEF2LLANode(ArmLogicTreeNode):
     arm_version  = 1
 
     def arm_init(self, context):
-        self.add_input('ArmNodeSocketObject', 'Object')
-        self.add_input('ArmVectorSocket',     'ECEF')
+        self.add_input('ArmNodeSocketObject', 'Planet')
+        self.add_input('ArmVectorSocket',     'Vehicle ECEF [m, m, m]')
 
-        self.add_output('ArmVectorSocket', 'LLA', is_var=True)
+        self.add_output('ArmVectorSocket', 'Vehicle LLA [dd, dd, m]', is_var=True)
