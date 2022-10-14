@@ -26,7 +26,7 @@ class ECEF2LLANode extends LogicNode
 		var ecc_sqrd:  Float = object.properties.get("ecc_sqrd");
 		var ecc_prime: Float = object.properties.get("ecc_prime");
 
-		var LLA:Vec4 = new Vec4();
+		var LLA: Vec4 = new Vec4();
 
 		var x: Float = ECEF.x;
 		var y: Float = ECEF.y;
