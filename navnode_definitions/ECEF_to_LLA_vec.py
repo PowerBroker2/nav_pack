@@ -16,7 +16,11 @@ class ECEF2LLANode(ArmLogicTreeNode):
     arm_version  = 1
 
     def arm_init(self, context):
-        self.add_input('ArmNodeSocketObject', 'Planet')
-        self.add_input('ArmVectorSocket',     'Vehicle ECEF [m, m, m]')
+        self.add_input('ArmFloatSocket',  'Planet semi-major axis (m)')
+        self.add_input('ArmFloatSocket',  'Planet semi-minor axis (m)')
+        self.add_input('ArmFloatSocket',  'Planet flattening')
+        self.add_input('ArmFloatSocket',  'Planet first eccentricity')
+        self.add_input('ArmFloatSocket',  'Planet second eccentricity')
+        self.add_input('ArmVectorSocket', 'Vehicle ECEF [m, m, m]')
 
         self.add_output('ArmVectorSocket', 'Vehicle LLA [dd, dd, m]', is_var=True)

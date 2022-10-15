@@ -1,6 +1,5 @@
 package armory.logicnode;
 
-import iron.object.Object;
 import iron.math.Vec4;
 
 class ECEF2LLANode extends LogicNode
@@ -14,17 +13,17 @@ class ECEF2LLANode extends LogicNode
 	{
 		// https://stackoverflow.com/a/25428344/9860973
 
-		var object: Object = inputs[0].get();
-		var ECEF:   Vec4   = inputs[1].get();
-		if (ECEF == null) return 0.0;
+		var a:         Float = inputs[0].get();
+		var b:         Float = inputs[1].get();
+		var f:         Float = inputs[2].get();
+		var ecc:       Float = inputs[3].get();
+		var ecc_prime: Float = inputs[4].get();
+		var ECEF:      Vec4  = inputs[5].get();
+		if ((a == null) || (b == null) || (f == null) || (ecc == null) || (ecc_prime == null) || (ECEF == null)) return 0.0;
 
-		var a:         Float = object.properties.get("a");
-		var a_sqrd:    Float = object.properties.get("a_sqrd");
-		var b:         Float = object.properties.get("b");
-		var b_sqrd:    Float = object.properties.get("b_sqrd");
-		var f:         Float = object.properties.get("f");
-		var ecc_sqrd:  Float = object.properties.get("ecc_sqrd");
-		var ecc_prime: Float = object.properties.get("ecc_prime");
+		var a_sqrd:   Float = Math.pow(a,   2);
+		var b_sqrd:   Float = Math.pow(b,   2);
+		var ecc_sqrd: Float = Math.pow(ecc, 2);
 
 		var LLA: Vec4 = new Vec4();
 

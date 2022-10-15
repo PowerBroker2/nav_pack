@@ -1,6 +1,5 @@
 package armory.logicnode;
 
-import iron.object.Object;
 import iron.math.Vec4;
 
 class LLA2ECEFNode extends LogicNode
@@ -12,12 +11,12 @@ class LLA2ECEFNode extends LogicNode
 
 	override function get(from:Int):Dynamic
 	{
-		var object: Object = inputs[0].get();
-		var LLA:    Vec4   = inputs[1].get();
-		if (LLA == null) return 0.0;
+		var a:   Float = inputs[0].get();
+		var ecc: Float = inputs[1].get();
+		var LLA: Vec4  = inputs[2].get();
+		if ((a == null) || (ecc == null) || (LLA == null)) return 0.0;
 
-		var a:        Float = object.properties.get("a");
-		var ecc_sqrd: Float = object.properties.get("ecc_sqrd");
+		var ecc_sqrd: Float = Math.pow(ecc, 2);
 
 		var ECEF: Vec4 = new Vec4();
 
