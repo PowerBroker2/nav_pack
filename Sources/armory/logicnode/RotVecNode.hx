@@ -34,7 +34,7 @@ class RotVecNode extends LogicNode
 		rotation_inv.z = -rotation.z;
 		rotation_inv.w =  rotation.w;
 
-		var out_vec_quat: Quat = rotation_inv.mult(rotation.mult(in_vec_quat)).normalize();
+		var out_vec_quat: Quat = rotation_inv.mult(rotation.mult(in_vec_quat));
 
 		var out_vec: Vec4 = new Vec4();
 		out_vec.x = out_vec_quat.x;
