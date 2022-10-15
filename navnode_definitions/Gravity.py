@@ -7,8 +7,8 @@ from arm.logicnode.arm_nodes import *
 import navnode_definitions
 
 
-class GravityVecNode(ArmLogicTreeNode):
-    bl_idname = 'LNGravityVecNode'
+class GravityNode(ArmLogicTreeNode):
+    bl_idname = 'LNGravityNode'
     bl_label  = 'Gravity'
 
     arm_category = navnode_definitions.CATEGORY_NAME

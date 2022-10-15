@@ -2,9 +2,9 @@ package armory.logicnode;
 
 import iron.math.Vec4;
 
-class GravityVecNode extends LogicNode
+class GravityNode extends LogicNode
 {
-	var G: Float = 6.6743015 * Math.pow(10, −11);
+	var G: Float = 6.6743015 * Math.pow(10, -11);
 
 	public function new(tree:LogicTree)
 	{
@@ -22,9 +22,9 @@ class GravityVecNode extends LogicNode
 
 		var mag: Float = G * planet_m * vehicle_m / Math.pow(ECEF.length(), 2);
 
-		var gravity: Vec4 = ECEF.normalize();
-		gravity = gravity.mult(-mag);
+		var grav: Vec4 = ECEF.normalize();
+		grav = grav.mult(-mag);
 		
-		return gravity;
+		return grav;
 	}
 }
