@@ -21,9 +21,9 @@ class ForcesNode extends LogicNode
 
 		var forces: Vec4 = new Vec4();
 		
-		forces.x = 0.5 * rho * Math.pow(v, 2) * Sref * Cf[0];
-		forces.y = 0.5 * rho * Math.pow(v, 2) * Sref * Cf[1];
-		forces.z = 0.5 * rho * Math.pow(v, 2) * Sref * Cf[2];
+		forces.x = 0.5 * rho * Math.pow(v, 2) * Sref * Cf.x;
+		forces.y = 0.5 * rho * Math.pow(v, 2) * Sref * Cf.y;
+		forces.z = 0.5 * rho * Math.pow(v, 2) * Sref * Cf.z;
 
 		return forces;
 	}

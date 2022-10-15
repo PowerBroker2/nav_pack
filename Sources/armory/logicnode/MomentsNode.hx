@@ -21,9 +21,9 @@ class MomentsNode extends LogicNode
 
 		var moments: Vec4 = new Vec4();
 		
-		moments.x = 0.5 * rho * Math.pow(v, 2) * Sref * Cm[0];
-		moments.y = 0.5 * rho * Math.pow(v, 2) * Sref * Cm[1];
-		moments.z = 0.5 * rho * Math.pow(v, 2) * Sref * Cm[2];
+		moments.x = 0.5 * rho * Math.pow(v, 2) * Sref * Cm.x;
+		moments.y = 0.5 * rho * Math.pow(v, 2) * Sref * Cm.y;
+		moments.z = 0.5 * rho * Math.pow(v, 2) * Sref * Cm.z;
 
 		return moments;
 	}
