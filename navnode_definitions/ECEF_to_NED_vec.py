@@ -19,6 +19,6 @@ class ECEF2NEDNode(ArmLogicTreeNode):
         self.add_input('ArmFloatSocket',  'Planet semi-major axis (m)')
         self.add_input('ArmFloatSocket',  'Planet first eccentricity')
         self.add_input('ArmVectorSocket', 'ECEF [m, m, m]')
-        self.add_input('ArmVectorSocket', 'LLA Reference [dd, dd, m]')
+        self.add_input('ArmVectorSocket', 'NED Origin LLA [dd, dd, m]')
 
         self.add_output('ArmVectorSocket', 'NED [m, m, m]', is_var=True)
