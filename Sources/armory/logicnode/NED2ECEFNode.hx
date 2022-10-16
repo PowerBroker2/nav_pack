@@ -4,7 +4,7 @@ import iron.math.Vec4;
 import iron.math.Quat;
 import iron.math.Mat4;
 
-class NED2ECEFNode extends LogicNode
+class NED2ECEFVecNode extends LogicNode
 {
 	public function new(tree:LogicTree)
 	{
