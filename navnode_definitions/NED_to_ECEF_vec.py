@@ -7,8 +7,8 @@ from arm.logicnode.arm_nodes import *
 import navnode_definitions
 
 
-class NED2ECEFVecNode(ArmLogicTreeNode):
-    bl_idname = 'LNNED2ECEFVecNode'
+class NED2ECEFNode(ArmLogicTreeNode):
+    bl_idname = 'LNNED2ECEFNode'
     bl_label  = 'NED to ECEF'
 
     arm_category = navnode_definitions.CATEGORY_NAME
