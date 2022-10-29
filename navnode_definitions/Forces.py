@@ -19,6 +19,6 @@ class ForcesNode(ArmLogicTreeNode):
         self.add_input('ArmFloatSocket',  'Density (kg/m^3)')
         self.add_input('ArmFloatSocket',  'Velocity (m/s)')
         self.add_input('ArmFloatSocket',  'Ref Area (m^2)')
-        self.add_input('ArmVectorSocket', 'Cf')
+        self.add_input('ArmVectorSocket', 'CF')
 
         self.add_output('ArmVectorSocket', 'Forces [N, N, N]', is_var=True)
