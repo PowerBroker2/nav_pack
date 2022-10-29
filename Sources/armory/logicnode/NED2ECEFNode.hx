@@ -45,25 +45,11 @@ class NED2ECEFNode extends LogicNode
 
 		var rot: Quat = new Quat().fromMat(NED_R_ECEF.transpose()).normalize();
 
-		var rot_inv: Quat = new Quat();
-		rot_inv.x = -rot.x;
-		rot_inv.y = -rot.y;
-		rot_inv.z = -rot.z;
-		rot_inv.w =  rot.w;
-
-		var NED_quat: Quat = new Quat();
-		NED_quat.x = NED.x;
-		NED_quat.y = NED.y;
-		NED_quat.z = NED.z;
-		NED_quat.w = 0;
-
-		var rot_NED_quat: Quat = rot_inv.mult(rot.mult(NED_quat));
-
-		var rot_NED: Vec4 = new Vec4();
-		rot_NED.x = rot_NED_quat.x;
-		rot_NED.y = rot_NED_quat.y;
-		rot_NED.z = rot_NED_quat.z;
-		rot_NED.w = 0;
+		var rot_NED: Vec4 = new Vec4(NED.x,
+									 NED.y,
+									 NED.z,
+									 0);
+		rot_NED = rot_NED.applyQuat(rot);
 
 		var ECEF: Vec4 = new Vec4();
 		ECEF.x = ECEF_ref.x + rot_NED.x;
