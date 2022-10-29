@@ -2,51 +2,6 @@ package armory.logicnode;
 
 class AirDensityNode extends LogicNode
 {
-	var alt_arr: Array<Float> = [-1000,
-								     0,
-								  1000,
-								  2000,
-								  3000,
-								  4000,
-								  5000,
-								  6000,
-								  7000,
-								  8000,
-								  9000,
-								 10000,
-								 15000,
-								 20000,
-								 25000,
-								 30000,
-								 40000,
-								 50000,
-								 60000,
-								 70000,
-								 80000];
-	var rho_arr: Array<Float> = [1.347,
-								 1.225,
-								 1.112,
-								 1.007,
-								 0.9093,
-								 0.8194,
-								 0.7364,
-								 0.6601,
-								 0.5900,
-								 0.5258,
-								 0.4671,
-								 0.4135,
-								 0.1948,
-								 0.08891,
-								 0.04008,
-								 0.01841,
-								 0.003996,
-								 0.001027,
-								 0.0003097,
-								 0.00008283,
-								 0.00001846];
-	
-	var arr_len: Int = 21;
-
 	public function new(tree:LogicTree)
 	{
 		super(tree);
@@ -54,10 +9,10 @@ class AirDensityNode extends LogicNode
 
 	override function get(from:Int):Dynamic
 	{
-		// https://www.engineeringtoolbox.com/standard-atmosphere-d_604.html
-
-		var alt: Float = inputs[0].get();
-		if (alt == null) return 0.0;
+		var alt:     Float        = inputs[0].get();
+		var alt_arr: Array<Float> = inputs[1].get();
+		var rho_arr: Array<Float> = inputs[2].get();
+		var arr_len: Int          = inputs[3].get();
 
 		var rho:   Float = 0.0;
 		var idx_l: Int   = 0;

@@ -16,6 +16,9 @@ class AirDensityNode(ArmLogicTreeNode):
     arm_version  = 1
 
     def arm_init(self, context):
-        self.add_input('ArmFloatSocket', 'Alt above MSL (m)')
+        self.add_input('ArmFloatSocket',     'Alt above MSL (m)')
+        self.add_input('ArmNodeSocketArray', 'Alt above MSL Array [m, m, ..., m]')
+        self.add_input('ArmNodeSocketArray', 'Density Array [kg/m^3, kg/m^3, ..., kg/m^3]')
+        self.add_input('ArmFloatSocket',     'Density Array Length')
 
         self.add_output('ArmFloatSocket', 'Density (kg/m^3)', is_var=True)
