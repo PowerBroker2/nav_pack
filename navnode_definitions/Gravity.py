@@ -21,4 +21,5 @@ class GravityNode(ArmLogicTreeNode):
         self.add_input('ArmVectorSocket', 'Vehicle ECEF [m, m, m]')
 
         self.add_output('ArmVectorSocket', 'Gravity [N, N, N] (ECEF Frame)', is_var=True)
+        self.add_output('ArmVectorSocket', 'Gravity [N, N, N] (NED Frame)',  is_var=True)
         
