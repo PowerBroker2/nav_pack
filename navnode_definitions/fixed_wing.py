@@ -17,7 +17,7 @@ class FixedWingNode(ArmLogicTreeNode):
 
     def arm_init(self, context):
         self.add_input('ArmFloatSocket',    'Air Density (kg/m^3)')
-        self.add_input('ArmVectorSocket',   'Gravity_Vector [N, N, N] (ECEF Frame)')
+        self.add_input('ArmVectorSocket',   'Gravity_Vector [N, N, N] (NED Frame)')
         self.add_input('ArmFloatSocket',    'Vehicle Mass (kg)')
         self.add_input('ArmVectorSocket',   'Vehicle CG [m, m, m] (Body Frame)')
         self.add_input('ArmVectorSocket',   'Vehicle LLA [dd, dd, m]')
