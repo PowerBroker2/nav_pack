@@ -18,17 +18,17 @@ class World2DAENode extends LogicNode
 								   0,
 								   0);
 
-		var distance: Float = horiz.length();
+		var arc_distance: Float = horiz.length();
 
 		if (from == 0)
 		{
-			return distance;
+			return horiz.length(); // Arc distance
 		}
 		else if (from == 1)
 		{
-			return azimuth;
+			return (Math.atan2(world_loc.y, world_loc.x) * (180.0 / Math.PI) + 360) % 360; // Azimuth
 		}
 
-		return elevation;
+		return -Math.atan2(world_loc.z, arc_distance) * (180.0 / Math.PI); // Elevation
 	}
 }
