@@ -24,12 +24,12 @@ class CamTrackPtNode extends LogicNode
 
 		var cam_to_pt_dcs: Vec4 = cam_to_pt_vec.normalize();
 
-		var x_1_rot_axis:  Vec4      = new Vec4(-1, 0, 0, 0);
+		var x_1_rot_axis:  Vec4      = new Vec4(1, 0, 0, 0);
 		var x_1_rot_angle: FastFloat = Math.PI / 2.0;
 		var x_1_rot:       Quat      = new Quat().fromAxisAngle(x_1_rot_axis, x_1_rot_angle);
 
 		var y_rot_axis:  Vec4      = new Vec4(0, -1, 0, 0);
-		var y_rot_angle: FastFloat = Math.atan2(cam_to_pt_dcs.x, -cam_to_pt_dcs.y);
+		var y_rot_angle: FastFloat = Math.atan2(cam_to_pt_dcs.y, cam_to_pt_dcs.x);
 		var y_rot:       Quat      = new Quat().fromAxisAngle(y_rot_axis, y_rot_angle);
 
 		var x_2_rot_axis:  Vec4      = new Vec4(-1, 0, 0, 0);
