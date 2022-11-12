@@ -60,7 +60,6 @@ class FixedWingNode extends LogicNode
 		var pitch_command:                 Float = inputs[30].get();
 		var roll_command:                  Float = inputs[31].get();
 		var yaw_command:                   Float = inputs[32].get();
-		var throttle_command:              Float = inputs[33].get();
 
 
 		// Find NED to body rotation
@@ -181,9 +180,9 @@ class FixedWingNode extends LogicNode
 
 		// Find the local aerodynamic moments
 		var aero_moments_body: Vec4 = new Vec4();
-		aero_moments_body.x = tot_air_force * (((cmx_scale * Math.cos(alpha)) + cmx_offset) * Math.sin(beta));
-		aero_moments_body.y = tot_air_force * (((cmy_scale * Math.cos(alpha)) + cmy_offset) * Math.cos(beta));
-		aero_moments_body.z = tot_air_force * (((cmz_scale * Math.sin(beta))  + cmz_offset) * Math.cos(alpha));
+		// aero_moments_body.x = tot_air_force * (((cmx_scale * Math.cos(alpha)) + cmx_offset) * Math.sin(beta));
+		// aero_moments_body.y = tot_air_force * (((cmy_scale * Math.cos(alpha)) + cmy_offset) * Math.cos(beta));
+		// aero_moments_body.z = tot_air_force * (((cmz_scale * Math.sin(beta))  + cmz_offset) * Math.cos(alpha));
 
 
 		// Find the moment vector due to gravity and the lever arm between the CG and aerodynamic center
@@ -192,7 +191,7 @@ class FixedWingNode extends LogicNode
 		//compile moments
 		var tot_moments_body: Vec4 = new Vec4();
 		tot_moments_body = tot_moments_body.add(dampening_moments_body);
-		tot_moments_body = tot_moments_body.add(aero_moments_body);
+		// tot_moments_body = tot_moments_body.add(aero_moments_body);
 		tot_moments_body = tot_moments_body.add(cg_moments_body);
 
 

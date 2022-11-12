@@ -49,7 +49,6 @@ class FixedWingNode(ArmLogicTreeNode):
         self.add_input('ArmFloatSocket',    'Pitch Command (0 <-> 1023)')
         self.add_input('ArmFloatSocket',    'Roll Command (0 <-> 1023)')
         self.add_input('ArmFloatSocket',    'Yaw Command (0 <-> 1023)')
-        self.add_input('ArmFloatSocket',    'Throttle Command (0 <-> 1023)')
 
         self.add_output('ArmVectorSocket', 'Force Vector [N, N, N] (Body Frame)', is_var=True)
         self.add_output('ArmVectorSocket', 'Moment Vector [Nm, Nm, Nm] (Body Frame)', is_var=True)
