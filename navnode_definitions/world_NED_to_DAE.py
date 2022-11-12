@@ -7,16 +7,16 @@ from arm.logicnode.arm_nodes import *
 import navnode_definitions
 
 
-class World2DAENode(ArmLogicTreeNode):
-    bl_idname = 'LNWorld2DAENode'
-    bl_label  = 'World to DAE'
+class WorldNED2DAENode(ArmLogicTreeNode):
+    bl_idname = 'LNWorldNED2DAENode'
+    bl_label  = 'World NED to DAE'
 
     arm_category = navnode_definitions.CATEGORY_NAME
     arm_section  = 'transform'
     arm_version  = 1
 
     def arm_init(self, context):
-        self.add_input('ArmVectorSocket', 'World Location [m, m, m]')
+        self.add_input('ArmVectorSocket', 'World Location [m, m, m] (NED Frame)')
         
         self.add_output('ArmFloatSocket', 'Arc Distance (m)', is_var=True)
         self.add_output('ArmFloatSocket', 'Azimuth (°)',      is_var=True)
