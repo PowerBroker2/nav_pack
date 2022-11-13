@@ -12,7 +12,7 @@ class RandomGaussianIntNode(ArmLogicTreeNode):
     bl_label  = 'Random Gaussian Int'
 
     arm_category = navnode_definitions.CATEGORY_NAME
-    arm_section  = 'Random'
+    arm_section  = 'random'
     arm_version  = 1
 
     def arm_init(self, context):

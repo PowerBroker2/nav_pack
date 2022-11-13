@@ -148,8 +148,8 @@ class FixedWingNode extends LogicNode
 			// Compile forces
 			var tot_forces_body: Vec4 = new Vec4();
 			tot_forces_body = tot_forces_body.add(gravity_body);
-			tot_forces_body = tot_forces_body.add(lift_drag_body);
-			tot_forces_body = tot_forces_body.add(lateral_aero_forces_body);
+			// tot_forces_body = tot_forces_body.add(lift_drag_body);
+			// tot_forces_body = tot_forces_body.add(lateral_aero_forces_body);
 
 
 			return tot_forces_body;
@@ -190,9 +190,9 @@ class FixedWingNode extends LogicNode
 
 		//compile moments
 		var tot_moments_body: Vec4 = new Vec4();
-		tot_moments_body = tot_moments_body.add(dampening_moments_body);
+		// tot_moments_body = tot_moments_body.add(dampening_moments_body);
 		// tot_moments_body = tot_moments_body.add(aero_moments_body);
-		tot_moments_body = tot_moments_body.add(cg_moments_body);
+		// tot_moments_body = tot_moments_body.add(cg_moments_body);
 
 
 		return tot_moments_body;

@@ -22,7 +22,7 @@ class WorldNED2DAENode extends LogicNode
 
 		if (from == 0)
 		{
-			return horiz.length(); // Arc distance
+			return arc_distance; // Arc distance
 		}
 		else if (from == 1)
 		{

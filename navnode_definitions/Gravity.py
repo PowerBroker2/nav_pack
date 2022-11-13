@@ -12,7 +12,7 @@ class GravityNode(ArmLogicTreeNode):
     bl_label  = 'Gravity'
 
     arm_category = navnode_definitions.CATEGORY_NAME
-    arm_section  = 'transform'
+    arm_section  = 'physics'
     arm_version  = 1
 
     def arm_init(self, context):

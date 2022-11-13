@@ -12,7 +12,7 @@ class FixedWingNode(ArmLogicTreeNode):
     bl_label  = 'Fixed Wing Dynamics'
 
     arm_category = navnode_definitions.CATEGORY_NAME
-    arm_section  = 'transform'
+    arm_section  = 'aerodynamics'
     arm_version  = 1
 
     def arm_init(self, context):
@@ -21,7 +21,7 @@ class FixedWingNode(ArmLogicTreeNode):
         self.add_input('ArmFloatSocket',    'Vehicle Mass (kg)')
         self.add_input('ArmVectorSocket',   'Vehicle CG [m, m, m] (Body Frame)')
         self.add_input('ArmVectorSocket',   'Vehicle LLA [dd, dd, m]')
-        self.add_input('ArmRotationSocket', 'Vehicle Orientation')
+        self.add_input('ArmRotationSocket', 'Vehicle Orientation (Body to NED')
         self.add_input('ArmVectorSocket',   'Vehicle Angular Velocity Vector [°/s, °/s, °/s] (Body Frame)')
         self.add_input('ArmVectorSocket',   'Vehicle Velocity Vector [m/s, m/s, m/s] (Body Frame)')
         self.add_input('ArmVectorSocket',   'Wind Velocity Vector [m/s, m/s, m/s] (NED Frame)')

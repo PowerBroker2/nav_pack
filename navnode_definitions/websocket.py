@@ -12,7 +12,7 @@ class WebsocketNode(ArmLogicTreeNode):
     bl_label  = 'Websocket'
 
     arm_category = navnode_definitions.CATEGORY_NAME
-    arm_section  = 'Network'
+    arm_section  = 'network'
     arm_version  = 1
 
     def arm_init(self, context):

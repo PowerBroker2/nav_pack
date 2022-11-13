@@ -12,7 +12,7 @@ class CamTrackPtNode(ArmLogicTreeNode):
     bl_label  = 'Camera Track Point'
 
     arm_category = navnode_definitions.CATEGORY_NAME
-    arm_section  = 'transform'
+    arm_section  = 'camera'
     arm_version  = 1
 
     def arm_init(self, context):

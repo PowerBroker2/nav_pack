@@ -12,7 +12,7 @@ class MomentsNode(ArmLogicTreeNode):
     bl_label  = 'Moments'
 
     arm_category = navnode_definitions.CATEGORY_NAME
-    arm_section  = 'transform'
+    arm_section  = 'aerodynamics'
     arm_version  = 1
 
     def arm_init(self, context):
