@@ -18,5 +18,6 @@ class CamTrackPtNode(ArmLogicTreeNode):
     def arm_init(self, context):
         self.add_input('ArmVectorSocket', 'Point Location [m, m, m] (NED Frame)')
         self.add_input('ArmVectorSocket', 'Camera Location [m, m, m] (NED Frame)')
+        self.add_input('ArmFloatSocket',  'Roll Angle (rad - Body Frame)')
 
         self.add_output('ArmRotationSocket', 'Camera Orientation', is_var=True)
