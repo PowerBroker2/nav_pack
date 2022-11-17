@@ -148,8 +148,8 @@ class FixedWingNode extends LogicNode
 			// Compile forces
 			var tot_forces_body: Vec4 = new Vec4();
 			tot_forces_body = tot_forces_body.add(gravity_body);
-			// tot_forces_body = tot_forces_body.add(lift_drag_body);
-			// tot_forces_body = tot_forces_body.add(lateral_aero_forces_body);
+			tot_forces_body = tot_forces_body.add(lift_drag_body);
+			tot_forces_body = tot_forces_body.add(lateral_aero_forces_body);
 
 
 			return tot_forces_body;
